@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../assets/wisemount-logo.png';
 import wmheader1 from '../assets/wmheader1.png';
 
@@ -9,18 +8,20 @@ const Header = () => {
   return (
     <header style={{
       width: '100%',
-      padding: '1rem', 
+      padding: 'clamp(0.75rem, 2vw, 1rem)', 
       display: 'flex', 
       alignItems: 'center', 
       justifyContent: 'space-between',
-      position: 'sticky',
-      top: 0,
+      position: 'fixed',
+      top: '36px',
+      left: 0,
+      right: 0,
       zIndex: 1000,
-      background: 'rgba(34, 42, 15, 0.8)',
+      background: 'rgba(34, 42, 15, 0.95)',
       backdropFilter: 'blur(20px)',
-      borderRadius: '0 0 24px 24px',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+      border: 'none',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
       backgroundImage: `url(${wmheader1})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -28,18 +29,20 @@ const Header = () => {
       margin: 0,
       boxSizing: 'border-box',
       overflow: 'hidden',
+      minHeight: 'clamp(70px, 8vw, 80px)',
     }}>
       <div style={{display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0}}>
         <div style={{
           position: 'relative',
-          padding: '5px',
+          padding: '4px',
           borderRadius: '8px',
           background: 'linear-gradient(135deg, #1E3A8A 0%, #7C3AED 100%)',
-          marginRight: '1rem'
+          marginRight: 'clamp(0.5rem, 2vw, 1rem)',
+          flexShrink: 0
         }}>
           <img src={logo} alt="WiseMount" style={{
-            width: '60px', 
-            height: '60px', 
+            width: 'clamp(45px, 8vw, 60px)', 
+            height: 'clamp(45px, 8vw, 60px)', 
             objectFit: 'contain',
             borderRadius: '4px',
             filter: 'brightness(1.1)'
@@ -50,31 +53,29 @@ const Header = () => {
             style={{
               fontFamily: 'Exo 2',
               fontWeight: 900,
-              fontSize: '1.5rem',
-              letterSpacing: 1.5,
+              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+              letterSpacing: 1.2,
               color: '#fffde4',
               background: 'none',
               display: 'inline-block',
               textTransform: 'uppercase',
-              marginRight: 8,
+              marginRight: 6,
               filter: 'drop-shadow(0 2px 0 #000) drop-shadow(0 4px 12px #ffe066) drop-shadow(0 8px 24px #ffd700)',
               textShadow: '-2px 0 2px #000, 0 2px 2px #000, 2px 0 2px #000, 0 -2px 2px #000, 0 0 8px #ffe066',
               position: 'relative',
               whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
             }}
           >
             WISEMOUNT
           </span>
           <span style={{
-            fontSize: '10px',
+            fontSize: 'clamp(8px, 1.5vw, 10px)',
             fontWeight: 600,
             color: '#ffe066',
-            verticalAlign: 'justify',
+            verticalAlign: 'top',
             marginLeft: 2,
             position: 'relative',
-            top: 2,
+            top: -1,
             whiteSpace: 'nowrap',
           }}>
             Pvt Ltd
@@ -102,20 +103,13 @@ const Header = () => {
       <nav style={{
         display: 'flex', 
         alignItems: 'center', 
-        gap: '1.5rem',
-        flexWrap: 'wrap',
+        gap: 'clamp(0.5rem, 2vw, 1.2rem)',
+        flexWrap: 'nowrap',
         justifyContent: 'flex-end',
-        minWidth: 0
+        flexShrink: 0
       }} className="desktop-nav">
         <a href="#home" style={navLinkStyle}>Home</a>
         <a href="#products" style={navLinkStyle}>Products</a>
-        <div style={{position: 'relative'}}>
-          <button style={{...navLinkStyle, background: 'none', border: 'none', cursor: 'pointer'}}>Products ▼</button>
-          <div style={{position: 'absolute', top: '2.5rem', left: 0, background: '#23232b', borderRadius: 8, boxShadow: '0 2px 12px #0002', minWidth: 180, zIndex: 100}}>
-            <Link to="/wisestudio" style={{...navLinkStyle, display: 'block', padding: '12px 16px'}}>WiseStudio</Link>
-            {/* Add more product links here as needed */}
-          </div>
-        </div>
         <a href="#services" style={navLinkStyle}>Services</a>
         <a href="#about" style={navLinkStyle}>About</a>
         <a href="#contact" style={{...navLinkStyle, ...ctaButtonStyle}}>Contact</a>
@@ -138,7 +132,6 @@ const Header = () => {
         }} className="mobile-nav">
           <a href="#home" style={navLinkStyle} onClick={() => setIsMobileMenuOpen(false)}>Home</a>
           <a href="#products" style={navLinkStyle} onClick={() => setIsMobileMenuOpen(false)}>Products</a>
-          <Link to="/wisestudio" style={navLinkStyle} onClick={() => setIsMobileMenuOpen(false)}>WiseStudio</Link>
           <a href="#services" style={navLinkStyle} onClick={() => setIsMobileMenuOpen(false)}>Services</a>
           <a href="#about" style={navLinkStyle} onClick={() => setIsMobileMenuOpen(false)}>About</a>
           <a href="#contact" style={{...navLinkStyle, ...ctaButtonStyle}} onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
@@ -153,10 +146,10 @@ const navLinkStyle = {
   fontWeight: 600,
   color: '#E2E8F0',
   textDecoration: 'none',
-  fontSize: '14px',
+  fontSize: 'clamp(12px, 2vw, 14px)',
   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
   position: 'relative',
-  padding: '8px 12px',
+  padding: 'clamp(6px, 1.5vw, 8px) clamp(8px, 2vw, 12px)',
   borderRadius: '8px',
   whiteSpace: 'nowrap',
 };
@@ -164,7 +157,7 @@ const navLinkStyle = {
 const ctaButtonStyle = {
   background: 'linear-gradient(135deg, #F97316 0%, #EC4899 100%)',
   color: '#fff',
-  padding: '10px 20px',
+  padding: 'clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px)',
   borderRadius: '12px',
   fontWeight: 700,
   boxShadow: '0 4px 20px rgba(249, 115, 22, 0.3)',

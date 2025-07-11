@@ -24,6 +24,33 @@ function HomePage() {
         <ProductShowcase />
       </div>
       <Testimonials />
+      <div id="about" style={{
+        padding: '4rem 0',
+        background: 'linear-gradient(135deg, rgba(30,58,138,0.05) 0%, rgba(124,58,237,0.05) 100%)',
+        textAlign: 'center'
+      }}>
+        <div className="container">
+          <h2 style={{
+            fontFamily: 'Poppins',
+            fontWeight: 700,
+            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            color: '#F1F5F9',
+            marginBottom: '2rem'
+          }}>
+            About WiseMount
+          </h2>
+          <p style={{
+            fontFamily: 'Open Sans',
+            fontSize: '1.1rem',
+            color: '#94A3B8',
+            maxWidth: '800px',
+            margin: '0 auto',
+            lineHeight: 1.6
+          }}>
+            WiseMount Private Limited is a leading technology company specializing in comprehensive digital solutions across 12+ industry sectors. We empower businesses with intelligent, scalable, and user-friendly platforms that drive growth, efficiency, and innovation in the digital age.
+          </p>
+        </div>
+      </div>
       <div id="services">
         <SectorCoverage />
       </div>
