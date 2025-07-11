@@ -25,8 +25,9 @@ const SectorCoverage = () => {
   const theme = 'light'; // This should be derived from your app's context or state
 
   return (
-    <section className="container" style={{padding: '4rem 0'}}>
-      <div style={{textAlign: 'center', marginBottom: '4rem'}}>
+    <section style={{padding: '4rem 0', width: '100%', overflow: 'hidden'}}>
+      <div className="container" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <div style={{textAlign: 'center', marginBottom: '4rem'}}>
         <div style={{
           display: 'inline-block',
           padding: '8px 24px',
@@ -68,10 +69,10 @@ const SectorCoverage = () => {
       {/* Interactive Sector Grid */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: 24,
+        gridTemplateColumns: 'repeat(5, 1fr)',
+        gap: 'clamp(1rem, 2vw, 1.5rem)',
         marginBottom: '3rem'
-      }}>
+      }} className="sector-grid">
         {sectors.map((sector, index) => (
           <div 
             key={sector.name}
@@ -208,6 +209,7 @@ const SectorCoverage = () => {
           }
         }
       `}</style>
+      </div>
     </section>
   );
 };

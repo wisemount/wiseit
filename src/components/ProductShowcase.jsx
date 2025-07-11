@@ -235,174 +235,192 @@ const productGradients = {
 };
 
 const ProductShowcase = () => (
-	<section id="products" className="container" style={{ padding: '2rem 0' }}>
-		<h2
-      style={{
-        fontFamily: 'Poppins',
-        fontWeight: 900,
-        fontSize: 52,
-        textAlign: 'center',
-        marginBottom: 32,
-        background: 'linear-gradient(90deg, #fffbe6 0%, #e0e7ff 50%, #f0fdfa 100%)',
-        WebkitBackgroundClip: 'text',
-        backgroundClip: 'text',
-        color: 'transparent',
-        WebkitTextFillColor: 'transparent',
-        letterSpacing: 1.5,
-        filter: 'drop-shadow(0 2px 12px rgba(0,0,0,0.10))',
-      }}
-    >
-      Wise Product Suite
-    </h2>
-		<div
+	<section id="products" style={{ padding: '2rem 0', width: '100%', overflow: 'hidden' }}>
+    <div className="container" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+			<h2
+				style={{
+					fontFamily: 'Poppins',
+					fontWeight: 900,
+					fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+					textAlign: 'center',
+					marginBottom: '2rem',
+					background: 'linear-gradient(90deg, #fffbe6 0%, #e0e7ff 50%, #f0fdfa 100%)',
+					WebkitBackgroundClip: 'text',
+					backgroundClip: 'text',
+					color: 'transparent',
+					WebkitTextFillColor: 'transparent',
+					letterSpacing: 1.5,
+					filter: 'drop-shadow(0 2px 12px rgba(0,0,0,0.10))',
+				}}
+			>
+				Wise Product Suite
+			</h2>		<div
 			style={{
 				display: 'grid',
-				gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-				gap: 32,
+				gridTemplateColumns: 'repeat(4, 1fr)',
+				gap: 'clamp(1rem, 2vw, 1.5rem)',
 				justifyContent: 'center',
 				alignItems: 'stretch',
 			}}
+			className="products-grid"
 		>
-			{products.map((product) => (
-				<div
-					className="card"
-					key={product.name}
-					style={{
-						minHeight: 420,
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'center',
-						justifyContent: 'flex-start',
-						padding: '2.5rem 1.5rem 2rem 1.5rem',
-						boxSizing: 'border-box',
-					}}
-				>
+				{products.map((product) => (
 					<div
-						className={`product-logo-animated-border ${
-							product.name === 'WiseStudio' ? 'wisestudio-logo' :
-							product.name === 'WiseCare' ? 'wisecare-logo' :
-							product.name === 'WiseStore' ? 'wisestore-logo' :
-							product.name === 'WiseBills' ? 'wisebills-logo' :
-							product.name === 'WiseHRM' ? 'wisehr-logo' :
-							product.name === 'WISERP' ? 'wiseerp-logo' :
-							product.name === 'WiseLMS' ? 'wiselms-logo' :
-							product.name === 'WiseCRM' ? 'wisecrm-logo' :
-							product.name === 'WiseLend' ? 'wiselend-logo' : ''
-						}`}
+						className="card"
+						key={product.name}
 						style={{
-							width: 156,
-							height: 156,
-							display: 'flex',
-							alignItems: 'center',
-							justifyContent: 'center',
-							marginBottom: 18,
-							boxShadow: '0 4px 16px rgba(30,58,138,0.10)',
-							overflow: 'hidden',
-							background: 'none',
-							borderRadius: '32px',
-							padding: 0,
-						}}
-					>
-						<img
-							src={product.image}
-							alt={product.name}
-							style={{
-								width: 128,
-								height: 128,
-								objectFit: 'contain',
-								display: 'block',
-								margin: '0 auto',
-								background: 'none',
-								aspectRatio: '1/1',
-								maxWidth: '128px',
-								maxHeight: '128px',
-								minWidth: '128px',
-								minHeight: '128px',
-							}}
-						/>
-					</div>
-					<h3
-            style={{
-              fontFamily: 'Poppins',
-              fontWeight: 700,
-              fontSize: 24,
-              margin: '8px 0',
-              textAlign: 'center',
-              background: productGradients[product.name] || 'var(--color-secondary)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              color: 'transparent',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            {product.name}
-          </h3>
-					<span
-						style={{
-							background: 'var(--color-accent)',
-							color: '#fff',
-							borderRadius: 8,
-							padding: '2px 12px',
-							fontSize: 14,
-							fontWeight: 600,
-							marginBottom: 8,
-							display: 'inline-block',
-						}}
-					>
-						{product.tag}
-					</span>
-					<p
-						style={{
-							fontFamily: 'Open Sans',
-							fontSize: 16,
-							textAlign: 'center',
-							marginBottom: 12,
-							minHeight: 48,
-						}}
-					>
-						{product.description}
-					</p>
-					<ul
-						style={{
-							fontFamily: 'Open Sans',
-							fontSize: 15,
-							textAlign: 'left',
-							paddingLeft: 18,
-							margin: 0,
-							listStyle: 'disc',
+							minHeight: 'auto',
 							display: 'flex',
 							flexDirection: 'column',
-							gap: 4,
+							alignItems: 'center',
+							justifyContent: 'flex-start',
+							padding: 'clamp(1rem, 3vw, 2.5rem) clamp(0.75rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem) clamp(0.75rem, 2vw, 1.5rem)',
+							boxSizing: 'border-box',
+							width: '100%',
 						}}
 					>
-						{product.features.map((f) => (
-							<li key={f}>{f}</li>
-						))}
-					</ul>
-					<div style={{width: '100%', marginTop: 18}}>
-            <table style={{width: '100%', borderCollapse: 'collapse', fontFamily: 'Open Sans', fontSize: 15, background: 'rgba(255,255,255,0.06)', borderRadius: 12, overflow: 'hidden', boxShadow: '0 2px 12px rgba(30,58,138,0.06)'}}>
-              <thead>
-                <tr style={{background: 'rgba(6,182,212,0.10)'}}>
-                  <th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)'}}>Type</th>
-                  <th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)'}}>Monthly</th>
-                  <th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)'}}>Yearly</th>
-                  <th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)'}}>Lifetime</th>
-                </tr>
-              </thead>
-              <tbody>
-                {product.pricing && product.pricing.map((plan) => (
-                  <tr key={plan.type} style={{background: plan.type === 'Elite' ? 'rgba(249,115,22,0.08)' : 'transparent'}}>
-                    <td style={{padding: '6px 8px', fontWeight: 600, color: plan.type === 'Elite' ? 'var(--color-secondary)' : '#fff'}}>{plan.type}</td>
-                    <td style={{padding: '6px 8px'}}>{plan.monthly}</td>
-                    <td style={{padding: '6px 8px'}}>{plan.yearly}</td>
-                    <td style={{padding: '6px 8px'}}>{plan.lifetime}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-				</div>
-			))}
+						<div
+							className={`product-logo-animated-border ${
+								product.name === 'WiseStudio' ? 'wisestudio-logo' :
+								product.name === 'WiseCare' ? 'wisecare-logo' :
+								product.name === 'WiseStore' ? 'wisestore-logo' :
+								product.name === 'WiseBills' ? 'wisebills-logo' :
+								product.name === 'WiseHRM' ? 'wisehr-logo' :
+								product.name === 'WISERP' ? 'wiseerp-logo' :
+								product.name === 'WiseLMS' ? 'wiselms-logo' :
+								product.name === 'WiseCRM' ? 'wisecrm-logo' :
+								product.name === 'WiseLend' ? 'wiselend-logo' : ''
+							}`}
+							style={{
+								width: 'clamp(120px, 15vw, 156px)',
+								height: 'clamp(120px, 15vw, 156px)',
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'center',
+								marginBottom: '1rem',
+								boxShadow: '0 4px 16px rgba(30,58,138,0.10)',
+								overflow: 'hidden',
+								background: 'none',
+								borderRadius: '32px',
+								padding: 0,
+							}}
+						>
+							<img
+								src={product.image}
+								alt={product.name}
+								style={{
+									width: 'clamp(96px, 12vw, 128px)',
+									height: 'clamp(96px, 12vw, 128px)',
+									objectFit: 'contain',
+									display: 'block',
+									margin: '0 auto',
+									background: 'none',
+									aspectRatio: '1/1',
+								}}
+							/>
+						</div>
+						<h3
+							style={{
+								fontFamily: 'Poppins',
+								fontWeight: 700,
+								fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+								margin: '8px 0',
+								textAlign: 'center',
+								background: productGradients[product.name] || 'var(--color-secondary)',
+								WebkitBackgroundClip: 'text',
+								backgroundClip: 'text',
+								color: 'transparent',
+								WebkitTextFillColor: 'transparent',
+							}}
+						>
+							{product.name}
+						</h3>
+						<span
+							style={{
+								background: 'var(--color-accent)',
+								color: '#fff',
+								borderRadius: 8,
+								padding: '2px 12px',
+								fontSize: 'clamp(12px, 2.5vw, 14px)',
+								fontWeight: 600,
+								marginBottom: 8,
+								display: 'inline-block',
+								textAlign: 'center',
+							}}
+						>
+							{product.tag}
+						</span>
+						<p
+							style={{
+								fontFamily: 'Open Sans',
+								fontSize: 'clamp(14px, 2.5vw, 16px)',
+								textAlign: 'center',
+								marginBottom: 12,
+								minHeight: 'auto',
+								lineHeight: 1.5,
+							}}
+						>
+							{product.description}
+						</p>
+						<ul
+							style={{
+								fontFamily: 'Open Sans',
+								fontSize: 'clamp(13px, 2.5vw, 15px)',
+								textAlign: 'left',
+								paddingLeft: 18,
+								margin: '0 0 1rem 0',
+								listStyle: 'disc',
+								display: 'flex',
+								flexDirection: 'column',
+								gap: 4,
+								width: '100%',
+							}}
+						>
+							{product.features.map((f) => (
+								<li key={f} style={{ lineHeight: 1.4 }}>{f}</li>
+							))}
+						</ul>
+						<div style={{width: '100%', marginTop: 'auto'}}>
+							<div style={{
+								width: '100%', 
+								overflowX: 'auto', 
+								WebkitOverflowScrolling: 'touch'
+							}}>
+								<table style={{
+									width: '100%', 
+									borderCollapse: 'collapse', 
+									fontFamily: 'Open Sans', 
+									fontSize: 'clamp(12px, 2.5vw, 15px)', 
+									background: 'rgba(255,255,255,0.06)', 
+									borderRadius: 12, 
+									overflow: 'hidden', 
+									boxShadow: '0 2px 12px rgba(30,58,138,0.06)',
+									minWidth: '280px'
+								}}>
+									<thead>
+										<tr style={{background: 'rgba(6,182,212,0.10)'}}>
+											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Type</th>
+											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Monthly</th>
+											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Yearly</th>
+											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Lifetime</th>
+										</tr>
+									</thead>
+									<tbody>
+										{product.pricing && product.pricing.map((plan) => (
+											<tr key={plan.type} style={{background: plan.type === 'Elite' ? 'rgba(249,115,22,0.08)' : 'transparent'}}>
+												<td style={{padding: '6px 8px', fontWeight: 600, color: plan.type === 'Elite' ? 'var(--color-secondary)' : '#fff', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.type}</td>
+												<td style={{padding: '6px 8px', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.monthly}</td>
+												<td style={{padding: '6px 8px', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.yearly}</td>
+												<td style={{padding: '6px 8px', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.lifetime}</td>
+											</tr>
+										))}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
 		</div>
 	</section>
 );

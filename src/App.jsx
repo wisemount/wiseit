@@ -22,8 +22,10 @@ function HomePage() {
       <Testimonials />
       <SectorCoverage />
       <CallToAction />
-      <div className="container" style={{margin: '0 auto', maxWidth: 1200, padding: '2rem 0'}}>
-        <ContactForm />
+      <div style={{width: '100%', padding: '2rem 0'}}>
+        <div className="container">
+          <ContactForm />
+        </div>
       </div>
       <Footer />
     </>
