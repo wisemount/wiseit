@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 
 const sectors = [
-  { name: 'AI Solutions', icon: '🤖', color: '#6366F1', description: 'AI-powered automation, analytics, and smart business tools' },
-  { name: 'Healthcare', icon: '🏥', color: '#06B6D4', description: 'Patient management, EMR, telemedicine solutions' },
-  { name: 'Retail', icon: '🛍️', color: '#F97316', description: 'E-commerce, inventory, customer management' },
-  { name: 'Education', icon: '🎓', color: '#7C3AED', description: 'Learning management, online courses, assessments' },
-  { name: 'Manufacturing', icon: '🏭', color: '#EC4899', description: 'Production planning, quality control, supply chain' },
-  { name: 'Logistics', icon: '🚚', color: '#1E3A8A', description: 'Fleet management, route optimization, tracking' },
-  { name: 'Hospitality', icon: '🏨', color: '#F97316', description: 'Hotel management, booking systems, guest services' },
-  { name: 'Real Estate', icon: '🏠', color: '#06B6D4', description: 'Property management, CRM, virtual tours' },
-  { name: 'Legal', icon: '⚖️', color: '#7C3AED', description: 'Case management, document automation, billing' },
-  { name: 'Automotive', icon: '🚗', color: '#10B981', description: 'Dealership management, service scheduling, inventory' },
-  { name: 'Agriculture', icon: '🌾', color: '#EC4899', description: 'Farm management, crop monitoring, supply chain' },
-  { name: 'IT Services', icon: '💻', color: '#1E3A8A', description: 'Project management, resource planning, billing' },
-  // New sectors row
-  { name: 'Marine Tech', icon: '⚓', color: '#0EA5E9', description: 'Maritime logistics, fleet, and port management' },
-  { name: 'Export & Import', icon: '🚢', color: '#F59E42', description: 'Global trade, customs, and supply chain solutions' },
-  { name: 'Green, Bio and Deep Tech', icon: '🧬', color: '#22C55E', description: 'Sustainable, biotech, and advanced R&D platforms' },
-  { name: 'Trading', icon: '📈', color: '#FACC15', description: 'Commodity, stock, and goods trading management' },
+  { name: 'Smart IT & AI Solutions', icon: '🤖', color: '#6366F1', description: 'Smart automation, project tools, analytics, and digital transformation services' },
+  { name: 'Health & Wellness', icon: '❤️', color: '#DC2626', description: 'Telemedicine, patient records, therapy apps, and wellness platforms' },
+  { name: 'Retail', icon: '🛍️', color: '#F97316', description: 'E-commerce, inventory, POS, and customer loyalty systems' },
+  { name: 'Education', icon: '🎓', color: '#7C3AED', description: 'Online learning, student portals, assessments, and course platforms' },
+  { name: 'Manufacturing', icon: '🏭', color: '#EC4899', description: 'Production tools, quality checks, and supply chain management' },
+  { name: 'Transport & Mobility', icon: '�', color: '#10B981', description: 'Fleet tracking, servicing, delivery, and auto dealership tools' },
+  { name: 'Hospitality & Tourism', icon: '🏨', color: '#F59E0B', description: 'Hotel booking, guest services, and travel experience platforms' },
+  { name: 'Real Estate', icon: '🏠', color: '#06B6D4', description: 'CRM, property listings, rental tools, and virtual tours' },
+  { name: 'Legal', icon: '⚖️', color: '#7C3AED', description: 'Case management, legal CRM, and contract automation' },
+  { name: 'Agriculture', icon: '🌾', color: '#22C55E', description: 'Farm management, crop tracking, and agri supply systems' },
+  { name: 'Marine Tech', icon: '⚓', color: '#0EA5E9', description: 'Vessel tracking, port scheduling, and maritime logistics' },
+  { name: 'Export & Import', icon: '�', color: '#8B5CF6', description: 'Trade management, shipping docs, and customs automation' },
+  { name: 'Green, Bio & Deep Tech', icon: '🧬', color: '#059669', description: 'Sustainable tech, biotech tools, and R&D platforms' },
+  { name: 'Construction & Infrastructure', icon: '🏗️', color: '#F59E0B', description: 'BOQ tools, site tracking, and smart project management' },
+  { name: 'Media, Entertainment & Creators', icon: '🎬', color: '#EF4444', description: 'Content creation, OTT tools, and influencer platforms' },
+  { name: 'GovTech & Public Sector', icon: '🏛️', color: '#6366F1', description: 'Smart dashboards, public services, and governance tools' },
+  { name: 'FinTech & Trading', icon: '💸', color: '#10B981', description: 'Payments, lending, insurance, and trading platforms' },
+  { name: 'NGO & CSR Tech', icon: '🫱‍🫲', color: '#F97316', description: 'Donor CRM, CSR dashboards, and impact tracking' },
+  { name: 'Food & Wellness Products', icon: '🥗', color: '#84CC16', description: 'Organic foods, health products, and D2C wellness brands' },
+  { name: 'Gaming, AR/VR & Metaverse', icon: '🎮', color: '#8B5CF6', description: 'Gamified learning, AR tours, and immersive brand experiences' },
 ];
 
 const SectorCoverage = () => {
@@ -86,7 +89,7 @@ const SectorCoverage = () => {
                 ? `2px solid ${sector.color}` 
                 : '1px solid rgba(255, 255, 255, 0.2)',
               borderRadius: '20px',
-              padding: '2rem',
+              padding: 'clamp(1rem, 3vw, 2rem)',
               textAlign: 'center',
               transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
               transform: hoveredSector === index ? 'translateY(-8px) scale(1.02)' : 'translateY(0)',
@@ -99,8 +102,8 @@ const SectorCoverage = () => {
             }}
           >
             <div style={{
-              fontSize: 48,
-              marginBottom: '1rem',
+              fontSize: 'clamp(32px, 5vw, 48px)',
+              marginBottom: 'clamp(0.5rem, 2vw, 1rem)',
               transform: hoveredSector === index ? 'scale(1.2)' : 'scale(1)',
               transition: 'transform 0.3s ease'
             }}>
@@ -109,15 +112,16 @@ const SectorCoverage = () => {
             <h3 style={{
               fontFamily: 'Poppins',
               fontWeight: 700,
-              fontSize: 24,
+              fontSize: 'clamp(16px, 3vw, 24px)',
               color: '#F1F5F9',
-              margin: '0 0 12px 0'
+              margin: '0 0 clamp(6px, 1.5vw, 12px) 0',
+              lineHeight: 1.2
             }}>
               {sector.name}
             </h3>
             <p style={{
               fontFamily: 'Open Sans',
-              fontSize: 14,
+              fontSize: 'clamp(12px, 2vw, 14px)',
               color: '#94A3B8',
               margin: 0,
               lineHeight: 1.5,

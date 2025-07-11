@@ -815,109 +815,45 @@ table {
   animation: product-float 2.5s infinite alternate ease-in-out;
 }
 
-/* Additional Mobile Fixes for Better Alignment */
-@media (max-width: 768px) {
-  /* Ensure all full-width elements don't cause horizontal scroll */
-  header, .top-bar, section, footer {
-    max-width: 100vw !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix any potential margins that could cause overflow */
-  section {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  
-  /* Hero section mobile improvements */
-  section#home {
-    padding: 3rem 0 2rem 0 !important;
-    margin-bottom: 1.5rem !important;
-  }
-  
-  section#home .container {
-    padding: 0 1rem !important;
-  }
-  
-  section#home h1 {
-    font-size: 2rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  section#home p {
-    font-size: 16px !important;
-    margin-bottom: 2rem !important;
-    padding: 0 !important;
-  }
-  
-  section#home button {
-    min-width: 120px !important;
-    padding: 12px 20px !important;
-    font-size: 14px !important;
+/* Enhanced Sector Coverage with 20 sectors */
+.sector-grid > div {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sector-grid h3 {
+  font-size: clamp(16px, 2vw, 20px) !important;
+  line-height: 1.2 !important;
+  margin: 8px 0 !important;
+}
+
+.sector-grid p {
+  font-size: clamp(12px, 1.5vw, 14px) !important;
+  line-height: 1.4 !important;
+}
+
+.sector-grid > * {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Improved responsive spacing for 20 sectors */
+@media (max-width: 1600px) {
+  .sector-grid {
+    gap: clamp(0.75rem, 1.5vw, 1.25rem) !important;
   }
 }
 
-@media (max-width: 480px) {
-  /* Very small screens additional fixes */
-  .container {
-    padding: 0 0.5rem !important;
+@media (max-width: 1200px) {
+  .sector-grid {
+    gap: clamp(0.5rem, 1vw, 1rem) !important;
   }
   
-  section#home h1 {
-    font-size: 1.8rem !important;
-  }
-  
-  section#home p {
-    font-size: 14px !important;
-  }
-  
-  section#home button {
-    min-width: 100px !important;
-    padding: 10px 16px !important;
-    font-size: 13px !important;
-  }
-  
-  /* Product cards on very small screens */
-  section#products .card {
-    padding: 1rem 0.75rem !important;
-  }
-  
-  section#products .product-logo-animated-border {
-    width: 100px !important;
-    height: 100px !important;
-  }
-  
-  section#products .product-logo-animated-border img {
-    width: 80px !important;
-    height: 80px !important;
-    min-width: 80px !important;
-    min-height: 80px !important;
-    max-width: 80px !important;
-    max-height: 80px !important;
-  }
-  
-  section#products h3 {
-    font-size: 1rem !important;
-  }
-}
-
-/* Desktop improvements - ensure proper full width */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px !important;
-    padding: 0 2rem !important;
-  }
-}
-
-/* Tablet landscape improvements */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    padding: 0 1.5rem !important;
-  }
-  
-  section#products .card {
-    padding: 2rem 1.5rem !important;
+  .sector-grid > div {
+    padding: 1.5rem 1rem !important;
+    min-height: 240px;
   }
 }
 
