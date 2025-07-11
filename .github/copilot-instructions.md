@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This project is a Vite + React + TypeScript static landing page for WiseMount Private Limited, featuring the Wise product suite. Use responsive, modern, and colorful design. Prepare all code and assets for static hosting on GitHub Pages. Use Poppins for headings and Open Sans for body text. All product features for WiseCare, WiseStore, WiseBills, and WiseHRM should be based on Bahmni, Bagisto, InvoiceShelf, and Horilla open-source products, respectively.
