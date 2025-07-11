@@ -34,11 +34,6 @@ const products = [
 			'Mobile app access',
 			'API Access',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹1,499', yearly: '₹15,000', lifetime: '₹35,000' },
-			{ type: 'Pro', monthly: '₹4,999', yearly: '₹52,000', lifetime: '₹99,000' },
-			{ type: 'Elite', monthly: '₹14,999', yearly: '₹155,000', lifetime: '₹2,25,000' },
-		],
 	},
 	{
 		name: 'WiseCare',
@@ -64,11 +59,6 @@ const products = [
 			'OpenMRS integration',
 			'Telemedicine',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹2,499', yearly: '₹25,500', lifetime: '₹49,000' },
-			{ type: 'Pro', monthly: '₹7,499', yearly: '₹76,000', lifetime: '₹1,49,000' },
-			{ type: 'Elite', monthly: '₹19,999', yearly: '₹199,000', lifetime: '₹2,99,000' },
-		],
 	},
 	{
 		name: 'WiseStore',
@@ -93,11 +83,6 @@ const products = [
 			'Payment gateway integration',
 			'Shipping & tax management',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹999', yearly: '₹10,000', lifetime: '₹25,000' },
-			{ type: 'Pro', monthly: '₹3,499', yearly: '₹36,000', lifetime: '₹74,000' },
-			{ type: 'Elite', monthly: '₹9,999', yearly: '₹104,000', lifetime: '₹1,49,000' },
-		],
 	},
 	{
 		name: 'WiseBills',
@@ -112,11 +97,6 @@ const products = [
 			'Payment reminders',
 			'Financial analytics',
 			'Multi-currency support',
-		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹499', yearly: '₹5,000', lifetime: '₹12,000' },
-			{ type: 'Pro', monthly: '₹1,999', yearly: '₹20,000', lifetime: '₹39,000' },
-			{ type: 'Elite', monthly: '₹4,999', yearly: '₹51,000', lifetime: '₹89,000' },
 		],
 	},
 	{
@@ -134,11 +114,6 @@ const products = [
 			'Document management',
 			'Self-service portal',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹999', yearly: '₹10,000', lifetime: '₹22,000' },
-			{ type: 'Pro', monthly: '₹3,499', yearly: '₹35,000', lifetime: '₹69,000' },
-			{ type: 'Elite', monthly: '₹8,999', yearly: '₹92,000', lifetime: '₹1,45,000' },
-		],
 	},
 	{
 		name: 'WISERP',
@@ -155,11 +130,6 @@ const products = [
 			'HR & payroll',
 			'Asset management',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹2,999', yearly: '₹30,000', lifetime: '₹59,000' },
-			{ type: 'Pro', monthly: '₹9,999', yearly: '₹100,000', lifetime: '₹1,80,000' },
-			{ type: 'Elite', monthly: '₹24,999', yearly: '₹250,000', lifetime: '₹3,75,000' },
-		],
 	},
 	{
 		name: 'WiseLMS',
@@ -175,11 +145,6 @@ const products = [
 			'Discussion forums',
 			'Mobile-friendly',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹1,499', yearly: '₹15,000', lifetime: '₹29,000' },
-			{ type: 'Pro', monthly: '₹5,999', yearly: '₹61,000', lifetime: '₹1,10,000' },
-			{ type: 'Elite', monthly: '₹12,999', yearly: '₹132,000', lifetime: '₹1,99,000' },
-		],
 	},
 	{
 		name: 'WiseCRM',
@@ -194,13 +159,8 @@ const products = [
 			'Reports & analytics',
 			'Task & activity management',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹1,499', yearly: '₹15,000', lifetime: '₹32,000' },
-			{ type: 'Pro', monthly: '₹5,499', yearly: '₹55,000', lifetime: '₹1,10,000' },
-			{ type: 'Elite', monthly: '₹13,999', yearly: '₹139,000', lifetime: '₹2,25,000' },
-		],
 	},
-	{
+	/* {
 		name: 'WiseLend',
 		tag: 'Digital Lending Platform',
 		description: 'Flexible lending and loan management solution.',
@@ -213,12 +173,7 @@ const products = [
 			'Disbursement & collection',
 			'Analytics & reporting',
 		],
-		pricing: [
-			{ type: 'Lite', monthly: '₹1,999', yearly: '₹20,000', lifetime: '₹39,000' },
-			{ type: 'Pro', monthly: '₹6,999', yearly: '₹71,000', lifetime: '₹1,30,000' },
-			{ type: 'Elite', monthly: '₹17,999', yearly: '₹182,000', lifetime: '₹2,75,000' },
-		],
-	},
+	}, */
 ];
 
 // Gradient map for product names
@@ -380,44 +335,6 @@ const ProductShowcase = () => (
 								<li key={f} style={{ lineHeight: 1.4 }}>{f}</li>
 							))}
 						</ul>
-						<div style={{width: '100%', marginTop: 'auto'}}>
-							<div style={{
-								width: '100%', 
-								overflowX: 'auto', 
-								WebkitOverflowScrolling: 'touch'
-							}}>
-								<table style={{
-									width: '100%', 
-									borderCollapse: 'collapse', 
-									fontFamily: 'Open Sans', 
-									fontSize: 'clamp(12px, 2.5vw, 15px)', 
-									background: 'rgba(255,255,255,0.06)', 
-									borderRadius: 12, 
-									overflow: 'hidden', 
-									boxShadow: '0 2px 12px rgba(30,58,138,0.06)',
-									minWidth: '280px'
-								}}>
-									<thead>
-										<tr style={{background: 'rgba(6,182,212,0.10)'}}>
-											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Type</th>
-											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Monthly</th>
-											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Yearly</th>
-											<th style={{padding: '6px 8px', fontWeight: 700, color: 'var(--color-accent)', borderBottom: '1px solid rgba(30,58,138,0.08)', fontSize: 'clamp(11px, 2vw, 13px)'}}>Lifetime</th>
-										</tr>
-									</thead>
-									<tbody>
-										{product.pricing && product.pricing.map((plan) => (
-											<tr key={plan.type} style={{background: plan.type === 'Elite' ? 'rgba(249,115,22,0.08)' : 'transparent'}}>
-												<td style={{padding: '6px 8px', fontWeight: 600, color: plan.type === 'Elite' ? 'var(--color-secondary)' : '#fff', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.type}</td>
-												<td style={{padding: '6px 8px', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.monthly}</td>
-												<td style={{padding: '6px 8px', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.yearly}</td>
-												<td style={{padding: '6px 8px', fontSize: 'clamp(11px, 2vw, 13px)'}}>{plan.lifetime}</td>
-											</tr>
-										))}
-									</tbody>
-								</table>
-							</div>
-						</div>
 					</div>
 				))}
 			</div>

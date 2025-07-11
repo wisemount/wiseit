@@ -11,7 +11,7 @@ const TopBar = () => (
     fontWeight: 600,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     padding: '6px 1rem',
     letterSpacing: 0.3,
     zIndex: 1200,
@@ -25,37 +25,93 @@ const TopBar = () => (
     borderBottom: '1px solid rgba(255,255,255,0.1)',
     backdropFilter: 'blur(10px)'
   }}>
-    {/* Contact Information */}
+    {/* Contact Icons + Social Media - All Right Aligned */}
     <div style={{
       display: 'flex', 
       alignItems: 'center', 
       gap: '12px',
-      flexWrap: 'wrap',
-      flex: 1,
-      minWidth: 0
-    }}>
-      <span style={{display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap', minWidth: 0}}>
-        <i className="bi bi-telephone-fill" style={{fontSize: '12px', color: '#06B6D4'}}></i>
-        <a href="tel:+918939677189" style={{color: '#E2E8F0', textDecoration: 'none', fontSize: '11px'}}>+91 8939677189</a>
-      </span>
-      <span style={{display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap', minWidth: 0}}>
-        <i className="bi bi-envelope-fill" style={{fontSize: '12px', color: '#F97316'}}></i>
-        <a href="mailto:wisemount@outlook.com" style={{color: '#E2E8F0', textDecoration: 'none', fontSize: '11px', overflow: 'hidden', textOverflow: 'ellipsis'}}>wisemount@outlook.com</a>
-      </span>
-      <span style={{display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap'}}>
-        <i className="bi bi-whatsapp" style={{fontSize: '12px', color: '#10B981'}}></i>
-        <a href="https://wa.me/918939677189" target="_blank" rel="noopener noreferrer" style={{color: '#E2E8F0', textDecoration: 'none', fontSize: '11px'}}>WhatsApp</a>
-      </span>
-    </div>
-
-    {/* Social Media Engagement */}
-    <div style={{
-      display: 'flex', 
-      alignItems: 'center', 
-      gap: '8px',
-      flexShrink: 0,
+      justifyContent: 'flex-end',
       flexWrap: 'wrap'
     }}>
+      {/* Primary Contact Icons */}
+      <a 
+        href="mailto:wisemount@outlook.com"
+        style={{
+          color: '#F97316',
+          textDecoration: 'none',
+          fontSize: '16px',
+          transition: 'all 0.3s ease',
+          padding: '4px',
+          borderRadius: '4px'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.transform = 'scale(1.2)';
+          e.target.style.backgroundColor = 'rgba(249, 115, 22, 0.1)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.transform = 'scale(1)';
+          e.target.style.backgroundColor = 'transparent';
+        }}
+        title="Send us an email"
+      >
+        <i className="bi bi-envelope-fill"></i>
+      </a>
+      <a 
+        href="https://wa.me/918939677189?text=Hi%20WiseMount%2C%20I%20am%20reaching%20out%20from%20your%20website%20to%20learn%20more%20about%20your%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: '#25D366',
+          textDecoration: 'none',
+          fontSize: '16px',
+          transition: 'all 0.3s ease',
+          padding: '4px',
+          borderRadius: '4px'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.transform = 'scale(1.2)';
+          e.target.style.backgroundColor = 'rgba(37, 211, 102, 0.1)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.transform = 'scale(1)';
+          e.target.style.backgroundColor = 'transparent';
+        }}
+        title="Chat with us on WhatsApp"
+      >
+        <i className="bi bi-whatsapp"></i>
+      </a>
+      <a 
+        href="tel:+918939677189"
+        style={{
+          color: '#06B6D4',
+          textDecoration: 'none',
+          fontSize: '16px',
+          transition: 'all 0.3s ease',
+          padding: '4px',
+          borderRadius: '4px'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.transform = 'scale(1.2)';
+          e.target.style.backgroundColor = 'rgba(6, 182, 212, 0.1)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.transform = 'scale(1)';
+          e.target.style.backgroundColor = 'transparent';
+        }}
+        title="Call us"
+      >
+        <i className="bi bi-telephone-fill"></i>
+      </a>
+      
+      {/* Separator */}
+      <div style={{
+        width: '1px',
+        height: '16px',
+        backgroundColor: 'rgba(255,255,255,0.3)',
+        margin: '0 4px'
+      }}></div>
+      
+      {/* Social Media Icons */}
       <a href="https://www.linkedin.com/company/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#0077B5', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="LinkedIn" title="Follow us on LinkedIn">
         <i className="bi bi-linkedin"></i>
       </a>

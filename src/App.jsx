@@ -9,6 +9,7 @@ import SectorCoverage from './components/SectorCoverage';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
+// import Pricing from './components/Pricing'; // Uncomment if needed
 import { WiseStudio } from './components/products';
 import './App.css';
 
@@ -23,7 +24,7 @@ function HomePage() {
       <div id="products">
         <ProductShowcase />
       </div>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <div id="about" style={{
         padding: '4rem 0',
         background: 'linear-gradient(135deg, rgba(30,58,138,0.05) 0%, rgba(124,58,237,0.05) 100%)',
@@ -54,12 +55,13 @@ function HomePage() {
       <div id="services">
         <SectorCoverage />
       </div>
+      {/* <Pricing /> */}
       <CallToAction />
-      <div id="contact" style={{width: '100%', padding: '2rem 0'}}>
+      {/* <div id="contact" style={{width: '100%', padding: '2rem 0'}}>
         <div className="container">
           <ContactForm />
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
