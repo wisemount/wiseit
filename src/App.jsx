@@ -17,12 +17,18 @@ function HomePage() {
     <>
       <TopBar />
       <Header />
-      <Hero />
-      <ProductShowcase />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="products">
+        <ProductShowcase />
+      </div>
       <Testimonials />
-      <SectorCoverage />
+      <div id="services">
+        <SectorCoverage />
+      </div>
       <CallToAction />
-      <div style={{width: '100%', padding: '2rem 0'}}>
+      <div id="contact" style={{width: '100%', padding: '2rem 0'}}>
         <div className="container">
           <ContactForm />
         </div>

@@ -53,6 +53,133 @@ body {
     radial-gradient(circle at 40% 60%, rgba(249, 115, 22, 0.05) 0%, transparent 50%);
 }
 
+/* Account for fixed TopBar - ensure no gaps */
+body {
+  padding-top: 36px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Fixed TopBar and Header positioning - zero gap alignment */
+header {
+  position: fixed !important;
+  top: 36px !important;
+  width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  border-top: none !important;
+}
+
+/* Ensure TopBar has no bottom margin */
+.topbar, [style*="position: fixed"][style*="top: 0"] {
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* Remove any gaps between topbar and header */
+.top-bar-fixed + header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Content padding to account for fixed header and topbar */
+main, .main-content {
+  padding-top: calc(36px + 80px) !important; /* TopBar height + Header height */
+}
+
+/* Mobile responsiveness for fixed TopBar */
+@media (max-width: 768px) {
+  body {
+    padding-top: 32px;
+  }
+  
+  header {
+    top: 32px !important;
+    padding: 0.5rem !important;
+    min-height: 60px !important;
+  }
+  
+  main, .main-content {
+    padding-top: calc(32px + 60px) !important; /* Mobile TopBar + Header height */
+  }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+.top-bar + header,
+header {
+  margin-top: 0 !important;
+  border-top: none !important;
+}
+
+/* Ensure no horizontal scroll */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Mobile responsiveness for fixed layout */
+@media (max-width: 768px) {
+  body {
+    padding-top: 32px;
+  }
+  
+  header {
+    top: 32px !important;
+    padding: 0.75rem 1rem !important;
+    min-height: 70px !important;
+  }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  
+  header img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  header span {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
 #root {
   width: 100%;
   min-height: 100vh;
@@ -634,34 +761,65 @@ body, html, #root {
   }
 }
 
-/* Mobile TopBar Improvements */
+/* Mobile TopBar Improvements with Social Media */
 @media (max-width: 640px) {
   .top-bar {
-    font-size: 12px !important;
-    padding: 6px 1rem !important;
-    min-height: 36px !important;
+    font-size: 10px !important;
+    padding: 4px 0.75rem !important;
+    min-height: 32px !important;
+    gap: 0.5rem !important;
   }
   
   .top-bar a {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
   
-  .top-bar > div {
-    gap: 8px !important;
+  .top-bar > div:first-child {
+    gap: 6px !important;
+  }
+  
+  .top-bar > div:last-child {
+    gap: 4px !important;
+  }
+  
+  .top-bar > div:last-child a {
+    padding: 1px !important;
+    font-size: 12px !important;
   }
 }
 
 @media (max-width: 480px) {
   .top-bar {
     flex-direction: column !important;
-    gap: 0.5rem !important;
+    gap: 0.25rem !important;
     text-align: center !important;
-    padding: 8px 1rem !important;
+    padding: 4px 0.5rem !important;
+    min-height: auto !important;
   }
   
   .top-bar > div {
     justify-content: center !important;
     flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+  
+  .top-bar > div:first-child {
+    order: 1;
+    margin-bottom: 2px;
+  }
+  
+  .top-bar > div:last-child {
+    order: 2;
+    gap: 6px !important;
+  }
+  
+  /* Adjust body padding for smaller TopBar on mobile */
+  body {
+    padding-top: 50px !important;
+  }
+  
+  header {
+    top: 50px !important;
   }
 }
 
@@ -995,6 +1153,75 @@ section {
   
   .products-grid,
   .sector-grid {
+    gap: 0.75rem !important;
+  }
+}
+
+/* Fixed TopBar styles */
+.top-bar-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  z-index: 1200 !important;
+}
+
+/* Header positioning adjustment for fixed TopBar */
+header {
+  position: sticky !important;
+  top: 36px !important;
+}
+
+/* Mobile responsiveness for fixed TopBar */
+@media (max-width: 768px) {
+  body {
+    padding-top: 36px;
+  }
+  
+  .top-bar-fixed {
+    padding: 4px 0.75rem !important;
+    min-height: 32px !important;
+    font-size: 10px !important;
+  }
+  
+  .top-bar-fixed a {
+    font-size: 10px !important;
+  }
+  
+  header {
+    top: 32px !important;
+  }
+}
+
+/* Sector Grid Responsive Styles */
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+@media (max-width: 1200px) {
+  .sector-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .sector-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sector-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-grid {
+    grid-template-columns: 1fr !important;
     gap: 0.75rem !important;
   }
 }

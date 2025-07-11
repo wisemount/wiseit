@@ -20,7 +20,8 @@ const Hero = ({ theme, toggleTheme }) => {
     <section id="home" style={{
       background: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 25%, #7C3AED 75%, #EC4899 100%)',
       color: '#fff',
-      padding: 'clamp(4rem, 8vw, 8rem) 0 clamp(3rem, 6vw, 6rem) 0',
+      padding: 'clamp(6rem, 10vw, 10rem) 0 clamp(3rem, 6vw, 6rem) 0',
+      paddingTop: 'calc(116px + clamp(2rem, 4vw, 4rem))', // Account for fixed header
       textAlign: 'center',
       borderRadius: '0 0 clamp(24px, 6vw, 48px) clamp(24px, 6vw, 48px)',
       marginBottom: '2rem',

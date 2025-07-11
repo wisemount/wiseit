@@ -6,13 +6,13 @@ const sectors = [
   { name: 'Retail', icon: '🛍️', color: '#F97316', description: 'E-commerce, inventory, POS, and customer loyalty systems' },
   { name: 'Education', icon: '🎓', color: '#7C3AED', description: 'Online learning, student portals, assessments, and course platforms' },
   { name: 'Manufacturing', icon: '🏭', color: '#EC4899', description: 'Production tools, quality checks, and supply chain management' },
-  { name: 'Transport & Mobility', icon: '�', color: '#10B981', description: 'Fleet tracking, servicing, delivery, and auto dealership tools' },
+  { name: 'Transport & Mobility', icon: '🚗', color: '#10B981', description: 'Fleet tracking, servicing, delivery, and auto dealership tools' },
   { name: 'Hospitality & Tourism', icon: '🏨', color: '#F59E0B', description: 'Hotel booking, guest services, and travel experience platforms' },
   { name: 'Real Estate', icon: '🏠', color: '#06B6D4', description: 'CRM, property listings, rental tools, and virtual tours' },
   { name: 'Legal', icon: '⚖️', color: '#7C3AED', description: 'Case management, legal CRM, and contract automation' },
   { name: 'Agriculture', icon: '🌾', color: '#22C55E', description: 'Farm management, crop tracking, and agri supply systems' },
   { name: 'Marine Tech', icon: '⚓', color: '#0EA5E9', description: 'Vessel tracking, port scheduling, and maritime logistics' },
-  { name: 'Export & Import', icon: '�', color: '#8B5CF6', description: 'Trade management, shipping docs, and customs automation' },
+  { name: 'Export & Import', icon: '🚢', color: '#8B5CF6', description: 'Trade management, shipping docs, and customs automation' },
   { name: 'Green, Bio & Deep Tech', icon: '🧬', color: '#059669', description: 'Sustainable tech, biotech tools, and R&D platforms' },
   { name: 'Construction & Infrastructure', icon: '🏗️', color: '#F59E0B', description: 'BOQ tools, site tracking, and smart project management' },
   { name: 'Media, Entertainment & Creators', icon: '🎬', color: '#EF4444', description: 'Content creation, OTT tools, and influencer platforms' },
@@ -48,14 +48,16 @@ const SectorCoverage = () => {
         <h2 style={{
           fontFamily: 'Poppins', 
           fontWeight: 900, 
-          fontSize: 48, 
-          background: 'linear-gradient(135deg, #10B981 0%, #06B6D4 50%, #7C3AED 100%)',
+          fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', 
+          background: 'linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 30%, #94A3B8 70%, #64748B 100%)',
           backgroundClip: 'text',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-          marginBottom: 16
+          marginBottom: 16,
+          textShadow: '0 2px 4px rgba(0,0,0,0.1)',
+          filter: 'drop-shadow(0 1px 2px rgba(255,255,255,0.1))'
         }}>
-          "One Ecosystem. All Sectors."
+          "Built for All. Powered by WiseMount's Digital Unity."
         </h2>
         <p style={{
           fontFamily: 'Open Sans',
