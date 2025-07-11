@@ -32,11 +32,11 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/wiseIT">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/wiseit" element={<HomePage />} />
-        <Route path="/wiseit/wisestudio" element={<WiseStudio />} />
+        <Route path="/wiseIT" element={<HomePage />} />
+        <Route path="/wiseIT/wisestudio" element={<WiseStudio />} />
         <Route path="/wisestudio" element={<WiseStudio />} />
       </Routes>
     </Router>
