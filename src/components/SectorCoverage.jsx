@@ -55,9 +55,12 @@ const SectorCoverage = () => {
           WebkitTextFillColor: 'transparent',
           marginBottom: 16,
           textShadow: '0 2px 4px rgba(0,0,0,0.1)',
-          filter: 'drop-shadow(0 1px 2px rgba(255,255,255,0.1))'
+          filter: 'drop-shadow(0 1px 2px rgba(255,255,255,0.1))',
+          lineHeight: 1.3,
+          textAlign: 'center'
         }}>
-          "Built for All. Powered by WiseMount's Digital Unity."
+          📱 Digital Solutions & Tech for All — from Small to Supreme.<br/>
+          ⚡ Ignited by ✨ WiseMount's 🌐Digital Unity
         </h2>
         <p style={{
           fontFamily: 'Open Sans',
