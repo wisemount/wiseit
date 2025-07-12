@@ -112,22 +112,22 @@ const TopBar = () => (
       }}></div>
       
       {/* Social Media Icons */}
-      <a href="https://www.linkedin.com/company/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#0077B5', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="LinkedIn" title="Follow us on LinkedIn">
+      <a href="https://www.linkedin.com/company/wmhq" target="_blank" rel="noopener noreferrer" style={{color: '#0077B5', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="LinkedIn" title="Follow us on LinkedIn">
         <i className="bi bi-linkedin"></i>
       </a>
-      <a href="https://twitter.com/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#1DA1F2', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Twitter" title="Follow us on Twitter">
+      <a href="https://twitter.com/wisemounthq" target="_blank" rel="noopener noreferrer" style={{color: '#1DA1F2', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Twitter" title="Follow us on Twitter">
         <i className="bi bi-twitter"></i>
       </a>
-      <a href="https://www.facebook.com/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#1877F2', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Facebook" title="Like us on Facebook">
+      <a href="https://www.facebook.com/wmhq" target="_blank" rel="noopener noreferrer" style={{color: '#1877F2', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Facebook" title="Like us on Facebook">
         <i className="bi bi-facebook"></i>
       </a>
-      <a href="https://www.youtube.com/c/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#FF0000', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="YouTube" title="Subscribe to our YouTube">
+      <a href="https://www.youtube.com/@wmhq" target="_blank" rel="noopener noreferrer" style={{color: '#FF0000', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="YouTube" title="Subscribe to our YouTube">
         <i className="bi bi-youtube"></i>
       </a>
-      <a href="https://www.instagram.com/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#E4405F', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Instagram" title="Follow us on Instagram">
+      <a href="https://www.instagram.com/wm.hq" target="_blank" rel="noopener noreferrer" style={{color: '#E4405F', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Instagram" title="Follow us on Instagram">
         <i className="bi bi-instagram"></i>
       </a>
-      <a href="https://www.pinterest.com/wisemount" target="_blank" rel="noopener noreferrer" style={{color: '#BD081C', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Pinterest" title="Follow us on Pinterest">
+      <a href="www.pinterest.com/wmhq1" target="_blank" rel="noopener noreferrer" style={{color: '#BD081C', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Pinterest" title="Follow us on Pinterest">
         <i className="bi bi-pinterest"></i>
       </a>
     </div>
