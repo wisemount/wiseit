@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import wmcarousel1 from '../assets/wmcarousel1.png';
+import wmfallback1 from '../assets/wmfallback1.jpg';
 
 const Hero = ({ theme, toggleTheme }) => {
   const [currentTagline, setCurrentTagline] = useState(0);
@@ -89,7 +89,7 @@ const Hero = ({ theme, toggleTheme }) => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundImage: `url(${wmcarousel1})`,
+          backgroundImage: `url(${wmfallback1})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
