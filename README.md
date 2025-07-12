@@ -1,12 +1,11 @@
 # WiseMount Private Limited – IT Products & Services Landing Page
 
 This project is a modern, responsive, and static React landing page for WiseMount Private Limited, featuring the Wise product suite:
-- WiseStudio (white label of yogicfuture)
-- WiseCare (features from Bahmni)
-- WiseStore (features from Bagisto)
-- WiseBills (features from InvoiceShelf)
-- WiseHRM (features from Horilla)
-
+- WiseStudio 
+- WiseCare 
+- WiseStore 
+- WiseBills  
+- WiseHRM 
 ## Features
 - Responsive, colorful, and modern design
 - Poppins for headings, Open Sans for body text
