@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -71,7 +71,7 @@ function HomePage() {
 function App() {
   console.log('App component rendered');
   return (
-    <Router basename="/">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/wisestudio" element={<WiseStudio />} />
