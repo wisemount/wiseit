@@ -14,6 +14,7 @@ import { WiseStudio } from './components/products';
 import './App.css';
 
 function HomePage() {
+  console.log('HomePage component rendered');
   return (
     <>
       <TopBar />
@@ -68,6 +69,7 @@ function HomePage() {
 }
 
 function App() {
+  console.log('App component rendered');
   return (
     <Router basename="/">
       <Routes>
