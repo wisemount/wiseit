@@ -25,8 +25,9 @@ npm run deploy
 ```
 
 ## GitHub Pages Setup
-- The Vite `base` is set to `/wiseit/` (update if your repo name is different).
+- The Vite `base` is set to `/` for custom domain deployment.
 - The `gh-pages` package is used for deployment.
+- Custom domain: `it.wisemount.in`
 
 ---
 
