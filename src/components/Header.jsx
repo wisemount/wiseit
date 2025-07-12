@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/wisemount-logo.png';
-import wmheader1 from '../assets/wmheader1.png';
+import wmheader2 from '../assets/wmheader-2.jpg';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Header = () => {
       border: 'none',
       borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
       boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-      backgroundImage: `url(${wmheader1})`,
+      backgroundImage: `url(${wmheader2})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',

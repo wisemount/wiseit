@@ -48,7 +48,7 @@ function HomePage() {
             margin: '0 auto',
             lineHeight: 1.6
           }}>
-            WiseMount Private Limited is a leading technology company specializing in comprehensive digital solutions across 12+ industry sectors. We empower businesses with intelligent, scalable, and user-friendly platforms that drive growth, efficiency, and innovation in the digital age.
+            “Digital Unity Built for All. Powered by WiseMount is more than our motto — it’s our mission. We build smart, scalable digital solutions for 20+ industries, helping businesses of all sizes innovate, automate, and elevate.”
           </p>
         </div>
       </div>
