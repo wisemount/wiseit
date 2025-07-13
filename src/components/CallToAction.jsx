@@ -79,7 +79,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section style={{
+    <section id="contact" style={{
       padding: '4rem 0',
       background: 'linear-gradient(135deg, #b108b6 0%, #6610F2 100%)',
       color: '#fff',

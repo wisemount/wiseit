@@ -71,7 +71,7 @@ const SectorCoverage = () => {
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
               marginRight: '8px'
             }}></i>
-            <span>Digital Solutions & Tech for All — from Small to Supreme.</span>
+           
           </div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
             <i className="bi bi-lightning-charge" style={{

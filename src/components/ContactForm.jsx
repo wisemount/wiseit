@@ -6,7 +6,7 @@ const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQjzLl
 
 function ContactForm() {
   return (
-    <section className="contact-form-section" id="contact">
+    <section className="contact-form-section">
       <h2 className="contact-form-title">Contact Us</h2>
       <form className="contact-form" action={GOOGLE_FORM_ACTION} method="POST" target="_blank" rel="noopener noreferrer">
         <div className="form-group">
