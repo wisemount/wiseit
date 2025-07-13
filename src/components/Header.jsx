@@ -32,22 +32,15 @@ const Header = () => {
       minHeight: 'clamp(70px, 8vw, 80px)',
     }}>
       <div style={{display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0}}>
-        <div style={{
-          position: 'relative',
-          padding: '4px',
-          borderRadius: '8px',
-          background: 'linear-gradient(135deg, #1E3A8A 0%, #7C3AED 100%)',
+        <img src={logo} alt="WiseMount" style={{
+          width: 'clamp(45px, 8vw, 60px)', 
+          height: 'clamp(45px, 8vw, 60px)', 
+          objectFit: 'contain',
           marginRight: 'clamp(0.5rem, 2vw, 1rem)',
-          flexShrink: 0
-        }}>
-          <img src={logo} alt="WiseMount" style={{
-            width: 'clamp(45px, 8vw, 60px)', 
-            height: 'clamp(45px, 8vw, 60px)', 
-            objectFit: 'contain',
-            borderRadius: '4px',
-            filter: 'brightness(1.1)'
-          }} />
-        </div>
+          padding: 0,
+          border: 'none',
+          background: 'transparent'
+        }} />
         <div style={{minWidth: 0}}>
           <span
             style={{
