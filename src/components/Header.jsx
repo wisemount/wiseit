@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/wisemount-logo.png';
+import logo from '../assets/wmlogoo.png';
 import wmheader2 from '../assets/wmheader-2.jpg';
 
 const Header = () => {
