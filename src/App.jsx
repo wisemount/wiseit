@@ -38,7 +38,7 @@ function HomePage() {
             color: '#F1F5F9',
             marginBottom: '2rem'
           }}>
-            About WiseMount
+            Digital Solutions & Technology for All — from small startups to large enterprises.
           </h2>
           <p style={{
             fontFamily: 'Open Sans',
@@ -48,7 +48,8 @@ function HomePage() {
             margin: '0 auto',
             lineHeight: 1.6
           }}>
-            “Digital Unity Built for All. Powered by WiseMount is more than our motto — it’s our mission. We build smart, scalable digital solutions for 20+ industries, helping businesses of all sizes innovate, automate, and elevate.”
+            "Ignited by WiseMount" isn't just a motto — it's our mission.<br/>
+            We craft smart, scalable digital solutions across 20+ industries, empowering businesses of every size to innovate, automate, and elevate.
           </p>
         </div>
       </div>

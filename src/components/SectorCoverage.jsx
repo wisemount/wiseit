@@ -49,18 +49,59 @@ const SectorCoverage = () => {
           fontFamily: 'Poppins', 
           fontWeight: 900, 
           fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', 
-          background: 'linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 30%, #94A3B8 70%, #64748B 100%)',
-          backgroundClip: 'text',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
+          color: '#FFFFFF',
+          WebkitTextStroke: '1px #000000',
+          textStroke: '1px #000000',
           marginBottom: 16,
-          textShadow: '0 2px 4px rgba(0,0,0,0.1)',
-          filter: 'drop-shadow(0 1px 2px rgba(255,255,255,0.1))',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
           lineHeight: 1.3,
-          textAlign: 'center'
+          textAlign: 'center',
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '0.5rem'
         }}>
-          📱 Digital Solutions & Tech for All — from Small to Supreme.<br/>
-          ⚡ Ignited by ✨ WiseMount's 🌐Digital Unity
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <i className="bi bi-phone" style={{
+              fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)',
+              color: '#FFFFFF',
+              WebkitTextStroke: '1px #000000',
+              textStroke: '1px #000000',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+              marginRight: '8px'
+            }}></i>
+            <span>Digital Solutions & Tech for All — from Small to Supreme.</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <i className="bi bi-lightning-charge" style={{
+              fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)',
+              color: '#FFFFFF',
+              WebkitTextStroke: '1px #000000',
+              textStroke: '1px #000000',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+              marginRight: '8px'
+            }}></i>
+            <span>Ignited by</span>
+            <i className="bi bi-stars" style={{
+              fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)',
+              color: '#FFFFFF',
+              WebkitTextStroke: '1px #000000',
+              textStroke: '1px #000000',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+              margin: '0 8px'
+            }}></i>
+            <span>WiseMount's</span>
+            <i className="bi bi-globe" style={{
+              fontSize: 'clamp(1.5rem, 3.5vw, 2.5rem)',
+              color: '#FFFFFF',
+              WebkitTextStroke: '1px #000000',
+              textStroke: '1px #000000',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+              marginLeft: '8px'
+            }}></i>
+            <span>Digital Unity</span>
+          </div>
         </h2>
         <p style={{
           fontFamily: 'Open Sans',
