@@ -127,7 +127,7 @@ const TopBar = () => (
       <a href="https://www.instagram.com/wm.hq" target="_blank" rel="noopener noreferrer" style={{color: '#E4405F', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Instagram" title="Follow us on Instagram">
         <i className="bi bi-instagram"></i>
       </a>
-      <a href="www.pinterest.com/wmhq1" target="_blank" rel="noopener noreferrer" style={{color: '#BD081C', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Pinterest" title="Follow us on Pinterest">
+      <a href="https://www.pinterest.com/wmhq1" target="_blank" rel="noopener noreferrer" style={{color: '#BD081C', textDecoration: 'none', fontSize: '14px', padding: '2px', transition: 'all 0.3s ease', borderRadius: '3px'}} aria-label="Pinterest" title="Follow us on Pinterest">
         <i className="bi bi-pinterest"></i>
       </a>
     </div>

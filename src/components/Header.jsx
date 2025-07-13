@@ -62,13 +62,11 @@ const Header = () => {
             WISEMOUNT
           </span>
           <span style={{
-            fontSize: 'clamp(8px, 1.5vw, 10px)',
+            fontSize: 'clamp(0.6rem, 2vw, 0.8rem)',
             fontWeight: 600,
             color: '#ffe066',
-            verticalAlign: 'top',
-            marginLeft: 2,
-            position: 'relative',
-            top: -1,
+            verticalAlign: 'baseline',
+            marginLeft: 4,
             whiteSpace: 'nowrap',
           }}>
             Pvt Ltd

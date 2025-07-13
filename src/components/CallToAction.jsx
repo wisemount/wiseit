@@ -222,20 +222,37 @@ const CallToAction = () => {
 
         {/* WhatsApp Section */}
         <div style={{
-          background: '#fff',
+          background: 'linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #2c5530 100%)',
           borderRadius: '16px',
           padding: '2rem',
           marginBottom: '2rem',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.3), 0 0 40px rgba(37, 211, 102, 0.1)',
+          border: '1px solid rgba(37, 211, 102, 0.3)',
           maxWidth: '800px',
-          margin: '0 auto 2rem'
+          margin: '0 auto 2rem',
+          position: 'relative',
+          overflow: 'hidden'
         }}>
+          {/* Subtle background pattern */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'radial-gradient(circle at 20% 80%, rgba(37, 211, 102, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(32, 186, 90, 0.05) 0%, transparent 50%)',
+            pointerEvents: 'none'
+          }}></div>
+          
           <h3 style={{
-            color: '#25D366',
+            color: '#4ADE80',
             fontWeight: '700',
             fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
             marginBottom: '1.5rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            textShadow: '0 2px 8px rgba(74, 222, 128, 0.3)',
+            position: 'relative',
+            zIndex: 1
           }}>
             🚀 Join Our WhatsApp Communities
           </h3>
@@ -243,7 +260,9 @@ const CallToAction = () => {
           <div style={{
             display: 'grid',
             gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-            gap: '1rem'
+            gap: '1rem',
+            position: 'relative',
+            zIndex: 1
           }}>
             {/* Product News Group */}
             <a
@@ -251,23 +270,28 @@ const CallToAction = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                background: 'linear-gradient(135deg, #25D366 0%, #20BA5A 100%)',
+                background: 'linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%)',
                 color: '#fff',
-                padding: '1rem',
+                padding: '1.25rem',
                 borderRadius: '12px',
                 textDecoration: 'none',
                 textAlign: 'center',
                 transition: 'all 0.3s ease',
                 display: 'block',
-                fontWeight: '600'
+                fontWeight: '600',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 4px 15px rgba(16, 185, 129, 0.2)',
+                backdropFilter: 'blur(10px)'
               }}
               onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 8px 25px rgba(37, 211, 102, 0.3)';
+                e.target.style.transform = 'translateY(-3px) scale(1.02)';
+                e.target.style.boxShadow = '0 8px 30px rgba(16, 185, 129, 0.4)';
+                e.target.style.background = 'linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%)';
               }}
               onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = 'none';
+                e.target.style.transform = 'translateY(0) scale(1)';
+                e.target.style.boxShadow = '0 4px 15px rgba(16, 185, 129, 0.2)';
+                e.target.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%)';
               }}
             >
               📢 Join for Product News & Updates
@@ -279,23 +303,28 @@ const CallToAction = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                background: 'linear-gradient(135deg, #25D366 0%, #20BA5A 100%)',
+                background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%)',
                 color: '#fff',
-                padding: '1rem',
+                padding: '1.25rem',
                 borderRadius: '12px',
                 textDecoration: 'none',
                 textAlign: 'center',
                 transition: 'all 0.3s ease',
                 display: 'block',
-                fontWeight: '600'
+                fontWeight: '600',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 4px 15px rgba(59, 130, 246, 0.2)',
+                backdropFilter: 'blur(10px)'
               }}
               onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 8px 25px rgba(37, 211, 102, 0.3)';
+                e.target.style.transform = 'translateY(-3px) scale(1.02)';
+                e.target.style.boxShadow = '0 8px 30px rgba(59, 130, 246, 0.4)';
+                e.target.style.background = 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 50%, #1E40AF 100%)';
               }}
               onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = 'none';
+                e.target.style.transform = 'translateY(0) scale(1)';
+                e.target.style.boxShadow = '0 4px 15px rgba(59, 130, 246, 0.2)';
+                e.target.style.background = 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%)';
               }}
             >
               💼 Join Career & Internship Group

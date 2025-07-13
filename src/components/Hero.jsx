@@ -132,7 +132,7 @@ const Hero = ({ theme, toggleTheme }) => {
             fontWeight: 600,
             color: '#ffffff',
             textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'
-          }}>🌐 Digital Unity, Built for All.
+          }}>🌐 Digital Solution for All.
              ⚡Ignited by WiseMount. </span>
         </div>
 
